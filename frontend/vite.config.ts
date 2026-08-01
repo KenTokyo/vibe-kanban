@@ -62,10 +62,11 @@ export default defineConfig({
     },
   },
   server: {
-    port: parseInt(process.env.FRONTEND_PORT || "3000"),
+    port: parseInt(process.env.FRONTEND_PORT || "3023"),
+    strictPort: true,
     proxy: {
       "/api": {
-        target: `http://localhost:${process.env.BACKEND_PORT || "3001"}`,
+        target: `http://localhost:${process.env.BACKEND_PORT || "3024"}`,
         changeOrigin: true,
         ws: true,
       }
