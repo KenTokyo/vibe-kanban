@@ -1,5 +1,7 @@
 # Repository Guidelines
 
+**Prüfbrowser immer schließen (Pflicht):** Jeder Browser, den ein Agent für Prüfungen startet (headless, Playwright, Puppeteer, CDP, Chrome for Testing), wird direkt nach der Prüfung samt Spielschleife geschlossen, spätestens am Ende jeder Antwort und auch in Subagents — ihn offen oder im Hintergrund weiterlaufen zu lassen ist verboten, denn am 27.09.2026 hat ein vergessener Prüfbrowser die ganze Grafikkarte belegt und das Spiel des Nutzers auf 60 FPS gedrückt.
+
 ## Project Structure & Module Organization
 - `crates/`: Rust workspace crates — `server` (API + bins), `db` (SQLx models/migrations), `executors`, `services`, `utils`, `deployment`, `local-deployment`, `remote`.
 - `frontend/`: React + TypeScript app (Vite, Tailwind). Source in `frontend/src`.
