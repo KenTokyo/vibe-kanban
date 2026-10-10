@@ -41,7 +41,7 @@ jobs:
         run: cd frontend && npm run format:check
 
       - name: Type check frontend
-        run: cd frontend && npx tsc --noEmit
+        run: pnpm --dir frontend typecheck
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable

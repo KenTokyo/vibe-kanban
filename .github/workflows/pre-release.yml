@@ -138,7 +138,7 @@ jobs:
         run: cd frontend && npm run lint
 
       - name: Type check frontend
-        run: cd frontend && npx tsc --noEmit
+        run: pnpm --dir frontend typecheck
 
       - name: Build frontend
         run: cd frontend && npm run build
